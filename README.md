@@ -33,6 +33,35 @@ Artificial Intelligence is transforming industries. Here are some of the ways it
 
 ---
 
+## 📌 Sentiment Analysis
+
+Classify the sentiment of a given sentence as POSITIVE, NEGATIVE, or NEUTRAL.
+
+Example:
+
+```bash
+pyai sentiment "I like this new AI Tool"
+```
+
+Output:
+
+```bash
+{'label': 'POSITIVE', 'score': 0.9992}
+```
+
+Example:
+
+```bash
+pyai sentiment "Oh.. This looks so terrible.."
+```
+
+Output:
+
+```bash
+{'label': 'NEGATIVE', 'score': 0.9997}
+```
+---
+
 ## 📥 Installation
 
 1. Clone the repository

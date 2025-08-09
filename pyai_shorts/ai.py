@@ -5,4 +5,8 @@ class AIShorts:
         """Summarize input text."""
         return summarizer.summarize(text, **kwargs)
 
+    def sentiment(self, text, **kwargs):
+        """Analyze sentiment of input text."""
+        return sentiment.analyze_sentiment(text, **kwargs)
+
 ai = AIShorts()
