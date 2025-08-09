@@ -7,17 +7,25 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
 
 ---
 
-## ✨ Features
+## 🧩 Table of Contents
 
-- 📝 **Text Summarization** — Quickly condense long text into concise summaries.
-- 😊 **Sentiment Analysis** — Detect positive, negative, or neutral sentiment in text.
-- 🖼️ **Image Captioning** — Generate captions for images automatically.
+- ✨ [Features](#features)
+  - 📝 **[Text Summarization](#-text-summarization)** — Quickly condense long text into concise summaries.
+  - 😊 **[Sentiment Analysis](#-sentiment-analysis)** — Detect positive, negative, or neutral sentiment in text.
+  - 🖼️ **[Image Captioning](#-image-caption-generator)** — Generate captions for images automatically.
+  - 🌐 **[Translator](#-translator)** — Translate text from one language to another.
+- 🛠 [Requirements](#-requirements)
+- 📥 [Installation](#-installation)
+- ▶️ [Running the Project](#-running-the-project)
 
 ---
 
-## 📌 Text Summarization
+## ✨ Features
 
-Our summarizer uses a pre-trained Transformer model to shorten long content while keeping the meaning intact.
+
+### 📝 Text Summarization
+
+Condenses long text into a shorter version while preserving the key meaning and context.
 
 Example:
 
@@ -33,9 +41,9 @@ Artificial Intelligence is transforming industries. Here are some of the ways it
 
 ---
 
-## 📌 Sentiment Analysis
+### 😊 Sentiment Analysis
 
-Classify the sentiment of a given sentence as POSITIVE, NEGATIVE, or NEUTRAL.
+Identifies the emotional tone of text, classifying it as POSITIVE, NEGATIVE, or NEUTRAL.
 
 Example:
 
@@ -63,9 +71,9 @@ Output:
 
 ---
 
-## 📌 Image Caption Generator
+### 🖼 Image Caption Generator
 
-Automatically generate a caption for an image.
+Generates a concise, descriptive caption for an image — ideal for accessibility, tagging, and creative applications.
 
 Example:
 
@@ -78,6 +86,29 @@ Output:
 ```bash
 Automatically generates a relevant caption for the provided image.
 ```
+
+---
+
+### 🌐 Translator
+
+Effortlessly translates text from a source language to a target language — fast, accurate, and natural-sounding.
+
+Example:
+
+```bash
+pyai translate "Hello. This is an example of AI translator command" --src en --tgt sp
+```
+
+Output:
+
+```bash
+Bonjour. C'est un exemple de commande de traducteur AI
+```
+---
+
+## 🛠 Requirements
+* Python 3.11 
+* See requirements.txt for all dependencies.
 
 ---
 
@@ -120,11 +151,5 @@ Or run through Python:
 ```bash
 python -m pyai_shorts.cli summary "Your text here..."
 ```
-
----
-
-## 🛠 Requirements
-* Python 3.11 
-* See requirements.txt for all dependencies.
 
 ---

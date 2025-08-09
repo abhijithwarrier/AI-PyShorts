@@ -1,4 +1,4 @@
-from .nlp import summarizer, sentiment
+from .nlp import summarizer, sentiment, translator
 from .vision import image_caption
 
 class AIShorts:
@@ -13,5 +13,9 @@ class AIShorts:
     def caption(self, image_path, **kwargs):
         """Generate caption for an image."""
         return image_caption.caption_image(image_path, **kwargs)
+
+    def translate(self, text, src_lang: str = "en", tgt_lang = "fr", **kwargs):
+        """Translate text from one language to another."""
+        return translator.translate(text, src_lang, tgt_lang, **kwargs)
 
 ai = AIShorts()
