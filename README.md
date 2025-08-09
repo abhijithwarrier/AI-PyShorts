@@ -63,8 +63,6 @@ Output:
 
 ---
 
----
-
 ## 📌 Image Caption Generator
 
 Automatically generate a caption for an image.
