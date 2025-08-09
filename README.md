@@ -60,6 +60,27 @@ Output:
 ```bash
 {'label': 'NEGATIVE', 'score': 0.9997}
 ```
+
+---
+
+---
+
+## 📌 Image Caption Generator
+
+Automatically generate a caption for an image.
+
+Example:
+
+```bash
+pyai caption "<path_to_the_image>"
+```
+
+Output:
+
+```bash
+Automatically generates a relevant caption for the provided image.
+```
+
 ---
 
 ## 📥 Installation
