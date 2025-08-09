@@ -1,0 +1,9 @@
+.idea
+.vscode
+.py
+__pycache__/
+.pytest_cache/
+build/
+dist/
+.ipynb_checkpoints/
+*.egg-info/
