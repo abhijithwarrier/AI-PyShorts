@@ -14,6 +14,7 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
   - 😊 **[Sentiment Analysis](#-sentiment-analysis)** — Detect positive, negative, or neutral sentiment in text.
   - 🖼️ **[Image Captioning](#-image-caption-generator)** — Generate captions for images automatically.
   - 🌐 **[Translator](#-translator)** — Translate text from one language to another.
+  - 🔍 **[Named Entity Recognition](#-named-entity-recognition)** — Extracts real-world entities like names, places, and organizations from text.
 - 🛠 [Requirements](#-requirements)
 - 📥 [Installation](#-installation)
 - ▶️ [Running the Project](#-running-the-project)
@@ -104,6 +105,29 @@ Output:
 ```bash
 Bonjour. C'est un exemple de commande de traducteur AI
 ```
+
+---
+
+### 🔍 Named Entity Recognition
+
+Identifies and classifies entities in text such as people, organizations, locations, dates, and more, using a pre-trained Transformer model.
+
+Example:
+
+```bash
+pyai ner "Python was created by Guido van Rossum in 1991 and is maintained by the Python Software Foundation in the U
+nited States." --aggregation-strategy simple
+```
+
+Output:
+
+| Entity | Label | Confidence |
+| ------ | ---- | ----- |
+| Python | MISC | 0.933 |
+| Guido van Rossum | PER | 0.997 |
+| Python Software Foundation | ORG | 0.999 |
+| United States | LOC | 0.999 |
+
 ---
 
 ## 🛠 Requirements

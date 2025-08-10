@@ -1,4 +1,4 @@
-from .nlp import summarizer, sentiment, translator
+from .nlp import summarizer, sentiment, translator, ner
 from .vision import image_caption
 
 class AIShorts:
@@ -17,5 +17,9 @@ class AIShorts:
     def translate(self, text, src_lang: str = "en", tgt_lang = "fr", **kwargs):
         """Translate text from one language to another."""
         return translator.translate(text, src_lang, tgt_lang, **kwargs)
+
+    def ner(self, text, **kwargs):
+            """Recognize named entities in input text."""
+            return ner.recognize_entity(text, **kwargs)
 
 ai = AIShorts()
