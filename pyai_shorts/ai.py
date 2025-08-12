@@ -1,4 +1,4 @@
-from .nlp import summarizer, sentiment, translator, ner
+from .nlp import summarizer, sentiment, translator, ner, paraphrase
 from .vision import image_caption
 
 class AIShorts:
@@ -21,5 +21,9 @@ class AIShorts:
     def ner(self, text, **kwargs):
             """Recognize named entities in input text."""
             return ner.recognize_entity(text, **kwargs)
+
+    def paraphrase(self, text, num=1, **kwargs):
+        """Generate paraphrases of input text."""
+        return paraphrase.generate_paraphrase(text, num_return_sequences=num, **kwargs)
 
 ai = AIShorts()

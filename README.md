@@ -15,6 +15,7 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
   - 🖼️ **[Image Captioning](#-image-caption-generator)** — Generate captions for images automatically.
   - 🌐 **[Translator](#-translator)** — Translate text from one language to another.
   - 🔍 **[Named Entity Recognition](#-named-entity-recognition)** — Extracts real-world entities like names, places, and organizations from text.
+  - 🔄 **[Paraphraser](#-paraphraser)** - Rewrites text with the same meaning in different words.
 - 🛠 [Requirements](#-requirements)
 - 📥 [Installation](#-installation)
 - ▶️ [Running the Project](#-running-the-project)
@@ -128,6 +129,23 @@ Output:
 | Python Software Foundation | ORG | 0.999 |
 | United States | LOC | 0.999 |
 
+---
+
+### 🔄 Paraphraser
+
+Generates alternative versions of your text while preserving its original meaning — ideal for improving clarity, variety, or tone.
+
+Example:
+
+```bash
+pyai paraphrase "Artificial Intelligence is transforming industries." --num 3
+```
+
+Output:
+
+```bash
+['Artificial Intelligence is changing industries.', 'Artificial Intelligence is changing the world.', 'Artificial intelligence is helping industries.']
+```
 ---
 
 ## 🛠 Requirements
