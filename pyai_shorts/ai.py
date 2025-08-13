@@ -1,4 +1,4 @@
-from .nlp import summarizer, sentiment, translator, ner, paraphrase
+from .nlp import summarizer, sentiment, translator, ner, paraphrase, language_detection
 from .vision import image_caption
 
 class AIShorts:
@@ -25,5 +25,9 @@ class AIShorts:
     def paraphrase(self, text, num=1, **kwargs):
         """Generate paraphrases of input text."""
         return paraphrase.generate_paraphrase(text, num_return_sequences=num, **kwargs)
+
+    def detect_lang(self, text, **kwargs):
+        """Generate paraphrases of input text."""
+        return language_detection.detect_language(text, **kwargs)
 
 ai = AIShorts()

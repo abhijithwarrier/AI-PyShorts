@@ -15,7 +15,8 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
   - 🖼️ **[Image Captioning](#-image-caption-generator)** — Generate captions for images automatically.
   - 🌐 **[Translator](#-translator)** — Translate text from one language to another.
   - 🔍 **[Named Entity Recognition](#-named-entity-recognition)** — Extracts real-world entities like names, places, and organizations from text.
-  - 🔄 **[Paraphraser](#-paraphraser)** - Rewrites text with the same meaning in different words.
+  - 🔄 **[Paraphraser](#-paraphraser)** — Rewrites text with the same meaning in different words.
+  - 🌍 **[Language Detection](#-language-detection)** — Detects the language of the given text instantly. 
 - 🛠 [Requirements](#-requirements)
 - 📥 [Installation](#-installation)
 - ▶️ [Running the Project](#-running-the-project)
@@ -146,6 +147,26 @@ Output:
 ```bash
 ['Artificial Intelligence is changing industries.', 'Artificial Intelligence is changing the world.', 'Artificial intelligence is helping industries.']
 ```
+
+---
+
+### 🌍 Language Detection
+
+The Language Detector tool analyzes your input text and identifies its language with high accuracy. 
+It’s useful for routing multilingual content, preprocessing text for translation, or simply detecting what language a piece of text is written in.
+
+Example:
+
+```bash
+ pyai detectlang "La inteligencia artificial está revolucionando la forma en que trabajamos y vivimos."
+```
+
+Output:
+
+```bash
+{'language': 'es', 'score': 0.984924852848053}
+```
+
 ---
 
 ## 🛠 Requirements
