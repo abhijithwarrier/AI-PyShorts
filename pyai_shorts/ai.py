@@ -1,4 +1,5 @@
 from .nlp import summarizer, sentiment, translator, ner, paraphrase, language_detection, keywords
+from .audio import tts
 from .vision import image_caption
 
 class AIShorts:
@@ -34,5 +35,9 @@ class AIShorts:
         """Extract keywords from input text."""
         return keywords.extract_keywords_table(text, top_k=top_k, ngram_min=ngram_min, ngram_max=ngram_max,
                                          method=method, diversity=diversity)
+
+    def tts(self, text, out_path="speech.wav", lang="en"):
+        """Convert text -> speech WAV using MMS-TTS."""
+        return tts.text_to_speech(text, out_path=out_path, lang=lang)
 
 ai = AIShorts()

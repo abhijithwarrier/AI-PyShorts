@@ -18,6 +18,7 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
   - 🔄 **[Paraphraser](#-paraphraser)** — Rewrites text with the same meaning in different words.
   - 🌍 **[Language Detection](#-language-detection)** — Detects the language of the given text instantly.
   - 🔑 **[Keyword Extraction](#-keyword-extraction)** – Find Key Terms in Text
+  - 🔊 **[Text to Speech (TTS)](#-text-to-speech)** – Convert any text into natural-sounding spoken audio (MP3/WAV). 
 - 🛠 [Requirements](#-requirements)
 - 📥 [Installation](#-installation)
 - ▶️ [Running the Project](#-running-the-project)
@@ -194,6 +195,26 @@ Output:
 | intelligence transforming | 0.388 |
 | data | 0.289 |
 | making | 0.128 |
+
+---
+
+### 🔊 Text to Speech
+
+Convert written text into natural-sounding speech with Hugging Face’s multilingual TTS models.  
+This script generates audio files (MP3/WAV) from any input text.
+
+Example:
+
+```bash
+pyai tts "Hello, welcome to my AI-PyShorts Repo" --lang en --out pyai_shorts/audio/sample_output/sample_audio.wav
+```
+
+Output:
+```bash
+pyai_shorts/audio/sample_output/sample_audio.wav
+```
+
+🎧 [Listen to the sample output](./pyai_shorts/audio/sample_output/sample_audio.wav)
 
 ---
 

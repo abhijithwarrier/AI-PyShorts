@@ -4,7 +4,7 @@ from pyai_shorts import ai
 def main():
     parser = argparse.ArgumentParser(description="AI-Shorts CLI")
     parser.add_argument("task", choices=[
-        "summary", "sentiment", "caption", "translate", "ner", "paraphrase", "detectlang", "keywords"
+        "summary", "sentiment", "caption", "translate", "ner", "paraphrase", "detectlang", "keywords", "tts"
     ], help="Task to perform")
     parser.add_argument("input", help="Input text or image path")
 
@@ -27,6 +27,10 @@ def main():
                         help="Selection method (keywords)")
     parser.add_argument("--diversity", type=float, default=0.5, help="MMR diversity 0-1 (keywords)")
 
+    # Arguments for TTS
+    parser.add_argument("--lang", default="en", help="TTS language code (e.g., en, es, fr, de, hi)")
+    parser.add_argument("--out", default="speech.wav", help="Output WAV file path")
+
     args = parser.parse_args()
 
     if args.task == "summary":
@@ -46,6 +50,8 @@ def main():
     elif args.task == "keywords":
         print(ai.keywords(args.input, top_k=args.topk, ngram_min=args.ngmin, ngram_max=args.ngmax,
                           method=args.method, diversity=args.diversity))
+    elif args.task == "tts":
+        print(ai.tts(args.input, out_path=args.out, lang=args.lang))
 
 if __name__ == "__main__":
     main()
