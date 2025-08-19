@@ -19,6 +19,7 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
   - 🌍 **[Language Detection](#-language-detection)** — Detects the language of the given text instantly.
   - 🔑 **[Keyword Extraction](#-keyword-extraction)** – Find Key Terms in Text
   - 🔊 **[Text to Speech (TTS)](#-text-to-speech)** – Convert any text into natural-sounding spoken audio (MP3/WAV). 
+  - ❓ **[Question Answering (QA)](#-question-answering)** - Ask a question about a given context and get precise answers extracted from the text.
 - 🛠 [Requirements](#-requirements)
 - 📥 [Installation](#-installation)
 - ▶️ [Running the Project](#-running-the-project)
@@ -210,11 +211,30 @@ pyai tts "Hello, welcome to my AI-PyShorts Repo" --lang en --out pyai_shorts/aud
 ```
 
 Output:
+
 ```bash
 pyai_shorts/audio/sample_output/sample_audio.wav
 ```
 
 🎧 [Listen to the sample output](./pyai_shorts/audio/sample_output/sample_audio.wav)
+
+---
+
+### ❓ Question Answering
+
+Ask questions against a given context paragraph and get precise answers extracted from it.
+
+Example:
+
+```bash
+pyai qa --context "Artificial Intelligence is changing healthcare and finance." --question "Which industries are being transformed by AI?"
+```
+
+Output:
+
+```bash
+healthcare and finance
+```
 
 ---
 

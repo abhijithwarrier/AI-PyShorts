@@ -1,4 +1,8 @@
-from .nlp import summarizer, sentiment, translator, ner, paraphrase, language_detection, keywords
+from .nlp import (
+    summarizer, sentiment, translator,
+    ner, paraphrase, language_detection,
+    keywords, qa
+)
 from .audio import tts
 from .vision import image_caption
 
@@ -39,5 +43,9 @@ class AIShorts:
     def tts(self, text, out_path="speech.wav", lang="en"):
         """Convert text -> speech WAV using MMS-TTS."""
         return tts.text_to_speech(text, out_path=out_path, lang=lang)
+
+    def qa(self, context, question, **kwargs):
+        """Ask a question about input text."""
+        return qa.answer_question(context, question)
 
 ai = AIShorts()

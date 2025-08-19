@@ -4,9 +4,12 @@ from pyai_shorts import ai
 def main():
     parser = argparse.ArgumentParser(description="AI-Shorts CLI")
     parser.add_argument("task", choices=[
-        "summary", "sentiment", "caption", "translate", "ner", "paraphrase", "detectlang", "keywords", "tts"
+        "summary", "sentiment", "caption",
+        "translate", "ner", "paraphrase",
+        "detectlang", "keywords", "tts",
+        "qa"
     ], help="Task to perform")
-    parser.add_argument("input", help="Input text or image path")
+    parser.add_argument("input", nargs="?", help="Input text or image path")
 
     # Arguments for translation
     parser.add_argument("--src-lang", default="en", help="Source language for translation")
@@ -31,6 +34,10 @@ def main():
     parser.add_argument("--lang", default="en", help="TTS language code (e.g., en, es, fr, de, hi)")
     parser.add_argument("--out", default="speech.wav", help="Output WAV file path")
 
+    # Arguments for QA
+    parser.add_argument("--context", help="Context for QA")
+    parser.add_argument("--question", help="Question for QA")
+
     args = parser.parse_args()
 
     if args.task == "summary":
@@ -52,6 +59,8 @@ def main():
                           method=args.method, diversity=args.diversity))
     elif args.task == "tts":
         print(ai.tts(args.input, out_path=args.out, lang=args.lang))
+    elif args.task == "qa":
+        print(ai.qa(args.context, args.question))
 
 if __name__ == "__main__":
     main()
