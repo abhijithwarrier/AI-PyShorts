@@ -16,7 +16,8 @@ The goal is simple: provide **ready-to-use AI commands** that require minimal se
   - 🌐 **[Translator](#-translator)** — Translate text from one language to another.
   - 🔍 **[Named Entity Recognition](#-named-entity-recognition)** — Extracts real-world entities like names, places, and organizations from text.
   - 🔄 **[Paraphraser](#-paraphraser)** — Rewrites text with the same meaning in different words.
-  - 🌍 **[Language Detection](#-language-detection)** — Detects the language of the given text instantly. 
+  - 🌍 **[Language Detection](#-language-detection)** — Detects the language of the given text instantly.
+  - 🔑 **[Keyword Extraction](#-keyword-extraction)** – Find Key Terms in Text
 - 🛠 [Requirements](#-requirements)
 - 📥 [Installation](#-installation)
 - ▶️ [Running the Project](#-running-the-project)
@@ -166,6 +167,33 @@ Output:
 ```bash
 {'language': 'es', 'score': 0.984924852848053}
 ```
+
+---
+
+### 🔑 Keyword Extraction
+
+Automatically extract the most important words and phrases from any text using transformer-based NLP models.
+This helps in summarization, topic discovery, and quick content insights without reading the entire text.
+
+Example:
+
+```bash
+pyai keywords "Artificial Intelligence is transforming industries through automation and data-driven decision making." \
+  --topk 8 --ngmin 1 --ngmax 2 --method mmr --diversity 0.6
+```
+
+Output:
+
+| Keyword | Score |
+| ------ |-------|
+| industries automation | 0.701 |
+| automation data | 0.588 |
+| artificial intelligence | 0.548 |
+| transforming industries | 0.453 |
+| driven decision | 0.438 |
+| intelligence transforming | 0.388 |
+| data | 0.289 |
+| making | 0.128 |
 
 ---
 

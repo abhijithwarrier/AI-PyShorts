@@ -4,7 +4,7 @@ from pyai_shorts import ai
 def main():
     parser = argparse.ArgumentParser(description="AI-Shorts CLI")
     parser.add_argument("task", choices=[
-        "summary", "sentiment", "caption", "translate", "ner", "paraphrase", "detectlang"
+        "summary", "sentiment", "caption", "translate", "ner", "paraphrase", "detectlang", "keywords"
     ], help="Task to perform")
     parser.add_argument("input", help="Input text or image path")
 
@@ -18,6 +18,14 @@ def main():
     # Arguments for paraphraser
     parser.add_argument("--num", type=int, default=1, help="Number of paraphrases (default 1)")
     parser.add_argument("--maxlen", type=int, default=60, help="Max length of each paraphrase")
+
+    # Arguments for keywords
+    parser.add_argument("--topk", type=int, default=10, help="Top K keywords (keywords)")
+    parser.add_argument("--ngmin", type=int, default=1, help="Min n-gram (keywords)")
+    parser.add_argument("--ngmax", type=int, default=2, help="Max n-gram (keywords)")
+    parser.add_argument("--method", default="mmr", choices=["mmr", "maxsum", "simple"],
+                        help="Selection method (keywords)")
+    parser.add_argument("--diversity", type=float, default=0.5, help="MMR diversity 0-1 (keywords)")
 
     args = parser.parse_args()
 
@@ -35,6 +43,9 @@ def main():
         print(ai.paraphrase(args.input, num=args.num, max_length=args.maxlen))
     elif args.task == "detectlang":
         print(ai.detect_lang(args.input))
+    elif args.task == "keywords":
+        print(ai.keywords(args.input, top_k=args.topk, ngram_min=args.ngmin, ngram_max=args.ngmax,
+                          method=args.method, diversity=args.diversity))
 
 if __name__ == "__main__":
     main()

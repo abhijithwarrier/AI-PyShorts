@@ -1,4 +1,4 @@
-from .nlp import summarizer, sentiment, translator, ner, paraphrase, language_detection
+from .nlp import summarizer, sentiment, translator, ner, paraphrase, language_detection, keywords
 from .vision import image_caption
 
 class AIShorts:
@@ -29,5 +29,10 @@ class AIShorts:
     def detect_lang(self, text, **kwargs):
         """Generate paraphrases of input text."""
         return language_detection.detect_language(text, **kwargs)
+
+    def keywords(self, text, top_k=10, ngram_min=1, ngram_max=2, method="mmr", diversity=0.5):
+        """Extract keywords from input text."""
+        return keywords.extract_keywords_table(text, top_k=top_k, ngram_min=ngram_min, ngram_max=ngram_max,
+                                         method=method, diversity=diversity)
 
 ai = AIShorts()
